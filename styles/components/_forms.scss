@@ -1,0 +1,77 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  background: $white;
+  border: 1px solid $gray-200;
+  @include shadow-sm;
+  border-radius: 12px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 24px;
+    gap: 24px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding: 1rem 24px;
+    border-top: 1px solid $gray-200;
+  }
+
+  //
+  margin: 1.5rem;
+
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+
+    .input-field {
+      flex: 1;
+    }
+  }
+
+  .input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.375rem;
+
+    label {
+      @include text-sm-medium;
+      color: $gray-700;
+    }
+    input,
+    textarea {
+      @include text-md-normal;
+      @include shadow-xs;
+      color: $gray-900;
+      border: 1px solid $gray-300;
+      border-radius: 0.5rem;
+      padding: 9px 13px;
+      transition: box-shadow 0.2s ease-in-out;
+      width: 100%;
+
+      &::placeholder {
+        color: $gray-500;
+      }
+
+      &:focus {
+        outline: none;
+        border: 1px solid $primary-300;
+        @include focus-ring-4-px-primary-100;
+      }
+
+      &:disabled {
+        color: $gray-500;
+        background-color: $gray-50;
+      }
+    }
+  }
+
+  .btn-error {
+    margin-right: auto;
+  }
+}
