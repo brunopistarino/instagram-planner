@@ -1,6 +1,6 @@
 export default function Details({ photo }) {
   return (
-    <div className={!photo && "hide"}>
+    <div className={!photo ? "hide" : ""}>
       <div className="form">
         <div className="content">
           <div className="input-field">

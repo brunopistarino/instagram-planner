@@ -40,14 +40,12 @@ export default function Sidebar({ handleLogout }) {
       <div className="main-nav">
         <div className="nav">
           <div className="header">
-            {/* <a href="/"> */}
-            {/* <Logo className="logo" /> */}
-            <Link href={"/"}>
-              <Logo className="logo" />
-              {/* <Logo /> */}
-              {/* <p>Logo</p> */}
+            <Link href="/">
+              {/* Ese div está puesto porque si no da error */}
+              <div>
+                <Logo className="logo" />
+              </div>
             </Link>
-            {/* </a> */}
           </div>
           <div className="navigation">
             {sidebarData.map((navItem) => (
@@ -62,9 +60,6 @@ export default function Sidebar({ handleLogout }) {
               </Link>
             ))}
           </div>
-        </div>
-        <div className="footer">
-          <img src={restaurant.icon} className="avatar" alt="" />
         </div>
       </div>
     </nav>
